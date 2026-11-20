@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071d2b">
+<meta name="description" content="مطعم ابن حميدو للسي فود — اختار أكلك البحري الطازج واطلب بسهولة.">
+<title>ابن حميدو | أصل السي فود</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071d2b;--navy2:#0d3041;--teal:#16a6a1;--gold:#d7ad62;--cream:#f5f1e8;--ink:#122a35;--muted:#71818a;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Cairo",sans-serif;background:var(--cream);color:var(--ink)}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}
+.topline{height:5px;background:linear-gradient(90deg,var(--gold),var(--teal),var(--gold))}
+header{position:sticky;top:0;z-index:20;background:rgba(7,29,43,.96);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid #ffffff16}
+.nav{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:21px}.brand strong{display:block;font-size:20px;line-height:1.2}.brand small{color:#b5c6cb;font-size:10px;letter-spacing:2px}
+nav{display:flex;gap:25px;font-size:13px;color:#d9e3e5}nav a:hover{color:var(--gold)}
+.nav-cta,.btn{border:0;border-radius:5px;background:var(--gold);color:var(--navy);font-weight:800;padding:11px 20px;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.hero{min-height:610px;background:linear-gradient(90deg,rgba(4,19,29,.91),rgba(4,19,29,.62) 52%,rgba(4,19,29,.25)),url('https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=2000&q=90') center/cover;display:flex;align-items:center;color:#fff}
+.hero-inner{max-width:1180px;width:100%;margin:auto;padding:90px 24px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.2;margin:17px 0 12px;font-weight:900;max-width:700px}.hero h1 span{color:var(--gold)}.hero p{color:#d3dfe2;max-width:520px;line-height:2;font-size:16px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn-outline{border:1px solid #ffffff80;color:#fff;padding:10px 20px;border-radius:5px;font-weight:700}.hero-note{margin-top:55px;color:#d3dfe2;font-size:12px;display:flex;gap:22px;flex-wrap:wrap}.hero-note span:before{content:"✦";color:var(--gold);margin-left:8px}
+.section{max-width:1180px;margin:auto;padding:85px 22px}.section-head{text-align:center;margin-bottom:38px}.section-head .eyebrow{color:#168d89}.section-head h2{font-size:clamp(28px,4vw,43px);margin:8px 0;color:var(--navy)}.section-head p{color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:-35px;position:relative;z-index:2;padding:0 22px;max-width:1180px;margin-left:auto;margin-right:auto}.feature{background:#fff;padding:24px;border-bottom:3px solid var(--gold);box-shadow:0 12px 35px #0926380d}.feature b{display:block;color:var(--navy);font-size:17px}.feature p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.menu-section{background:#fff}.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:25px 0 30px}.filter{border:1px solid #d9e1df;background:transparent;padding:8px 17px;border-radius:30px;color:#52646b;font-size:13px}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.menu-card{border:1px solid #e8ece9;background:#fff;padding:20px;display:flex;justify-content:space-between;gap:12px;align-items:center;transition:.2s}.menu-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 9px 24px #071d2b0b}.menu-card h3{margin:0;font-size:15px;color:var(--navy)}.menu-card small{display:block;color:#8b999c;font-size:11px;margin-top:4px}.price{white-space:nowrap;color:#128d88;font-weight:900;font-size:16px}.price small{display:inline;color:#8b999c;font-weight:500}
+.offers{background:var(--navy);color:#fff}.offers .section-head h2{color:#fff}.offers .section-head p{color:#b9c8cd}.offers .eyebrow{color:var(--gold)}.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.offer{padding:28px;background:linear-gradient(145deg,#123b4b,#0a2635);border:1px solid #ffffff18;position:relative;overflow:hidden}.offer:after{content:"";position:absolute;width:120px;height:120px;border:1px solid #d7ad6240;border-radius:50%;left:-35px;top:-35px}.offer .tag{color:var(--gold);font-size:11px;letter-spacing:1px}.offer h3{font-size:21px;margin:12px 0}.offer p{color:#b9c8cd;font-size:13px}.offer strong{font-size:26px;color:var(--gold)}
+.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:190px 190px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:4px}.gallery img:first-child{grid-row:span 2}
+.order-band{background:linear-gradient(90deg,#0a2939eF,#0a2939eF),url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=85') center/cover;color:#fff;text-align:center;padding:65px 20px}.order-band h2{font-size:34px;margin:0 0 8px}.order-band p{color:#c6d4d7;margin:0 0 22px}
+footer{background:#04141e;color:#fff;padding:45px 22px 20px}.footer-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footer-inner p,.footer-inner a{color:#aebfc4;font-size:13px;line-height:2}.footer-inner h3{margin-top:0;color:var(--gold)}.copyright{max-width:1180px;margin:30px auto 0;border-top:1px solid #ffffff1a;padding-top:16px;color:#81949a;font-size:11px;text-align:center}
+.float-wa{position:fixed;bottom:20px;left:20px;z-index:30;background:#168c70;color:white;padding:12px 17px;border-radius:40px;font-size:13px;font-weight:800;box-shadow:0 8px 25px #0003}
+@media(max-width:800px){nav{display:none}.hero{min-height:560px}.features{grid-template-columns:1fr;margin-top:0;padding-top:18px}.menu-grid{grid-template-columns:repeat(2,1fr)}.offer-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px 160px}.gallery img:first-child{grid-row:auto;grid-column:span 2}.footer-inner{grid-template-columns:1fr 1fr}.footer-inner>div:first-child{grid-column:span 2}}
+@media(max-width:480px){.nav{padding:11px 15px}.hero-inner{padding:70px 20px}.hero p{font-size:14px}.section{padding:60px 16px}.menu-grid{grid-template-columns:1fr}.menu-card{padding:17px}.gallery{gap:7px}.footer-inner{grid-template-columns:1fr}.footer-inner>div:first-child{grid-column:auto}.order-band h2{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="nav">
+<a class="brand" href="#home"><span class="brand-mark">ب</span><span><strong>ابن حميدو</strong><small>SEAFOOD HOUSE</small></span></a>
+<nav><a href="#home">الرئيسية</a><a href="#menu">المنيو</a><a href="#offers">العروض</a><a href="#gallery">أجواء ابن حميدو</a><a href="#contact">تواصل معنا</a></nav>
+<a class="nav-cta" href="#menu">استكشف المنيو</a>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="eyebrow">THE TASTE OF THE SEA</div>
+<h1>البحر على<br><span>أصوله.</span></h1>
+<p>في ابن حميدو، كل وجبة ليها حكاية من البحر. اختار أكلك المفضل واستمتع بتجربة سي فود بطعم يستاهل.</p>
+<div class="hero-actions"><a class="btn" href="#menu">شوف المنيو</a><a class="btn-outline" href="https://wa.me/201028080442" target="_blank" rel="noopener">اطلب عبر واتساب</a></div>
+<div class="hero-note"><span>اختيارات متنوعة</span><span>أسعار واضحة</span><span>الطلب سهل وسريع</span></div>
+</div></section>
+
+<div class="features">
+<div class="feature"><b>اختار اللي بتحبه</b><p>تشكيلة من الأسماك والمأكولات البحرية.</p></div>
+<div class="feature"><b>منيو واضح</b><p>كل صنف وسعره قدامك بكل سهولة.</p></div>
+<div class="feature"><b>اطلب بسهولة</b><p>تواصل معانا مباشرة لتأكيد طلبك.</p></div>
+</div>
+
+<section class="section menu-section" id="menu">
+<div class="section-head"><div class="eyebrow">OUR MENU</div><h2>منيو ابن حميدو</h2><p>اختار صنفك واستمتع بطعم البحر.</p></div>
+<div class="filters">
+<button class="filter active" data-filter="all">كل الأصناف</button><button class="filter" data-filter="trays">وجبات وصواني</button><button class="filter" data-filter="fish">الأسماك</button><button class="filter" data-filter="seafood">جمبري وسبيط</button><button class="filter" data-filter="special">فسيخ ورنجة</button><button class="filter" data-filter="offers">العروض</button>
+</div>
+<div class="menu-grid" id="menuGrid">
+<article class="menu-card" data-cat="trays"><div><h3>صينية ميكس الدلع</h3><small>تشكيلة بحرية</small></div><div class="price">750 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="trays"><div><h3>وجبة السعادة</h3><small>وجبة مميزة</small></div><div class="price">450 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="trays"><div><h3>صينية الصحاب</h3><small>صينية للمشاركة</small></div><div class="price">370 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="trays"><div><h3>صينية العيلة</h3><small>صينية للمشاركة</small></div><div class="price">750 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="fish"><div><h3>بلطي مشوي</h3></div><div class="price">125 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="fish"><div><h3>بلطي مقلي</h3></div><div class="price">130 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="fish"><div><h3>بوري مشوي</h3></div><div class="price">260 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="fish"><div><h3>ماكريل مشوي</h3></div><div class="price">260 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="fish"><div><h3>كابوريا</h3></div><div class="price">200 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="fish"><div><h3>قشر بياض بلدي</h3></div><div class="price">450 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="seafood"><div><h3>جمبري ني</h3></div><div class="price">650 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="seafood"><div><h3>جمبري مستوي</h3></div><div class="price">700 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="seafood"><div><h3>سبيط بلدي ني</h3></div><div class="price">400 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="seafood"><div><h3>سبيط مستوي</h3></div><div class="price">450 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="special"><div><h3>فسيخ</h3></div><div class="price">350 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="special"><div><h3>رنجة الدلع</h3></div><div class="price">140 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="offers"><div><h3>2 كيلو بلطي مشوي</h3><small>عرض كمية</small></div><div class="price">260 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="offers"><div><h3>4 كيلو بلطي مشوي</h3><small>عرض كمية</small></div><div class="price">500 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="offers"><div><h3>2 كيلو كابوريا</h3><small>عرض كمية</small></div><div class="price">300 <small>جنيه</small></div></article>
+<article class="menu-card" data-cat="trays"><div><h3>صواني مشكلة</h3><small>اسأل عن تفاصيل الأحجام المتاحة</small></div><div class="price">450–1500 <small>جنيه</small></div></article>
+</div>
+<p style="text-align:center;color:#8a999c;font-size:11px;margin-top:22px">الأسعار بالجنيه المصري وقد تختلف حسب الوزن والتوافر. يرجى تأكيد السعر عند الطلب.</p>
+</section>
+
+<section class="section offers" id="offers">
+<div class="section-head"><div class="eyebrow">SPECIAL DEALS</div><h2>عروض تستاهل التجربة</h2><p>اختيارات مميزة للمّة الحلوة.</p></div>
+<div class="offer-grid">
+<div class="offer"><div class="tag">SEAFOOD OFFER</div><h3>عرض البلطي</h3><p>2 كيلو بلطي مشوي</p><strong>260 جنيه</strong></div>
+<div class="offer"><div class="tag">FAMILY SIZE</div><h3>عرض الكمية</h3><p>4 كيلو بلطي مشوي</p><strong>500 جنيه</strong></div>
+<div class="offer"><div class="tag">SEA CRAB</div><h3>عرض الكابوريا</h3><p>2 كيلو كابوريا</p><strong>300 جنيه</strong></div>
+</div>
+</section>
+
+<section class="section" id="gallery">
+<div class="section-head"><div class="eyebrow">A TASTE OF THE SEA</div><h2>حكاية طعم بحري</h2><p>صور تعبر عن أجواء وتجربة المأكولات البحرية.</p></div>
+<div class="gallery">
+<img loading="lazy" src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=900&q=85" alt="طبق مأكولات بحرية">
+<img loading="lazy" src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=700&q=85" alt="مأكولات بحرية">
+<img loading="lazy" src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?auto=format&fit=crop&w=700&q=85" alt="سمك مشوي">
+<img loading="lazy" src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=700&q=85" alt="طبق طعام">
+<img loading="lazy" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=700&q=85" alt="سمك طازج">
+</div>
+</section>
+
+<section class="order-band"><h2>جاهز تطلب من ابن حميدو؟</h2><p>كلمنا وحدد الأصناف اللي نفسك فيها.</p><a class="btn" href="https://wa.me/201028080442" target="_blank" rel="noopener">اطلب دلوقتي عبر واتساب</a></section>
+</main>
+
+<footer id="contact"><div class="footer-inner">
+<div><a class="brand" href="#home"><span class="brand-mark">ب</span><span><strong>ابن حميدو</strong><small>SEAFOOD HOUSE</small></span></a><p>أصل السي فود في مصر. اختار من المنيو وتواصل معانا لتأكيد طلبك.</p></div>
+<div><h3>تواصل معنا</h3><p><a href="tel:01028080442">01028080442</a><br><a href="tel:01092064825">01092064825</a><br><a href="tel:01002713511">01002713511</a><br><a href="tel:01002507315">01002507315</a></p></div>
+<div><h3>روابط سريعة</h3><p><a href="#menu">المنيو</a><br><a href="#offers">العروض</a><br><a href="https://maps.app.goo.gl/micxmJHBBgMpH31F9" target="_blank" rel="noopener">موقعنا على الخريطة</a><br><a href="https://wa.me/201028080442" target="_blank" rel="noopener">واتساب الطلبات</a></p></div>
+</div><div class="copyright">© 2026 ابن حميدو — جميع الحقوق محفوظة</div></footer>
+<a class="float-wa" href="https://wa.me/201028080442" target="_blank" rel="noopener">اطلب واتساب</a>
+<script>
+const filters=document.querySelectorAll('.filter');
+const cards=document.querySelectorAll('.menu-card');
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+  filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+  const cat=btn.dataset.filter;
+  cards.forEach(card=>card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none');
+}));
+</script>
+</body></html>
